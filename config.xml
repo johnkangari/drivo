@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "uk.co.onosystem.drivo"
+        versionCode = "10" 
+        version     = "1.0.0" >
+
+    <name>Drivo For ONO System</name>
+
+    <description>
+        Drivo application for ONO driver management system.
+    </description>
+
+    <author href="https://www.onosystem.co.uk" email="info@aixsystem.com">
+        John Kangari
+    </author>
+
+</widget>
