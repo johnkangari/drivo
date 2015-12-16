@@ -35,7 +35,7 @@ app.config(function($routeProvider) {
 });// /all orders route
 
 app.controller("homeCtrl", function($scope, $http){
-    $http.get("http://192.168.1.20:1202/getDriverOrders?deviceId="+deviceId)
+    $http.get("http://ono.onosystem.co.uk/getDriverOrders?deviceId="+deviceId)
         .success(function(orders){
 //        $scope.title    = "My Delivery List";
         $scope.title    = deviceId;
@@ -44,7 +44,7 @@ app.controller("homeCtrl", function($scope, $http){
 });// homeCtrl
 
 app.controller("allOrdersCtrl", function($scope, $http){
-    $http.get("http://192.168.1.20:1202/getDriverOrders?deviceId="+deviceId)
+    $http.get("http://ono.onosystem.co.uk/getDriverOrders?deviceId="+deviceId)
         .success(function(orders){
         $scope.title    = "My All Delivery List";
         $scope.orders   = orders;
@@ -52,12 +52,12 @@ app.controller("allOrdersCtrl", function($scope, $http){
 });// allOrdersCtrl
 
 app.controller("orderDetailCtrl", function($scope, $http){
-    $http.get("http://192.168.1.20:1202/orderDetail?id="+global.getParameterByName("id"))
+    $http.get("http://ono.onosystem.co.uk/orderDetail?id="+global.getParameterByName("id"))
         .success(function(order){
         $scope.title             = "Order Detail";
         $scope.orderDetail       = order;
         $scope.changeOrderStat   = function(id, status){
-            $.get("http://192.168.1.20:1202/driverChangeOrderStat?id="+id+"&status="+status, function(respText, status, xhr){
+            $.get("http://ono.onosystem.co.uk/driverChangeOrderStat?id="+id+"&status="+status, function(respText, status, xhr){
                 if(xhr.status==200){
                     alert("The order status changed successfully.");
                     window.location.reload();
