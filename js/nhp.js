@@ -1,10 +1,10 @@
 app = angular.module('drivoApp', ['ngRoute']);
 
-deviceId = "";
-document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    deviceId = device.uuid;
-};
+// deviceId = "";
+// document.addEventListener("deviceready", onDeviceReady, false);
+// function onDeviceReady() {
+//     deviceId = device.uuid;
+// };
 
 app.config(function($routeProvider) {
     $routeProvider.when("/", {
@@ -35,16 +35,18 @@ app.config(function($routeProvider) {
 });// /all orders route
 
 app.controller("homeCtrl", function($scope, $http){
-    $http.get("http://ono.onosystem.co.uk/getDriverOrders?deviceId="+deviceId)
+    // $http.get("http://ono.onosystem.co.uk/getDriverOrders?deviceId="+deviceId)
+    $http.get("http://ono.onosystem.co.uk/getDriverOrders")
         .success(function(orders){
-//        $scope.title    = "My Delivery List";
-        $scope.title    = deviceId;
+       $scope.title    = "My Delivery List";
+        // $scope.title    = deviceId;
         $scope.orders   = orders;
     });// /get orders
 });// homeCtrl
 
 app.controller("allOrdersCtrl", function($scope, $http){
-    $http.get("http://ono.onosystem.co.uk/getDriverOrders?deviceId="+deviceId)
+    // $http.get("http://ono.onosystem.co.uk/getDriverOrders?deviceId="+deviceId)
+    $http.get("http://ono.onosystem.co.uk/getDriverOrders")
         .success(function(orders){
         $scope.title    = "My All Delivery List";
         $scope.orders   = orders;
