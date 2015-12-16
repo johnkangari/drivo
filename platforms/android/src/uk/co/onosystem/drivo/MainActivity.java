@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.phonegap.helloworld;
+package uk.co.onosystem.drivo;
 
 import android.os.Bundle;
 import org.apache.cordova.*;
