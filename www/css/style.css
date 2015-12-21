@@ -202,3 +202,11 @@ position: fixed;
 .footer{
     padding-top: 100px;
 }
+.input{
+    border: 1px solid #ccc!important;
+    
+}
+.small-centered{
+    margin: 0 auto;
+    
+}

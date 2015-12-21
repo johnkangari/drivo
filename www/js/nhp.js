@@ -7,6 +7,13 @@ app = angular.module('drivoApp', ['ngRoute']);
 // };
 
 app.config(function($routeProvider) {
+    $routeProvider.when("/profile", {
+        templateUrl: "profile.html",
+        controller: "profileCtrl"
+    });
+});// profile route
+
+app.config(function($routeProvider) {
     $routeProvider.when("/", {
         templateUrl: "home.html",
         controller: "homeCtrl"

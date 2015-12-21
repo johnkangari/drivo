@@ -1,0 +1,38 @@
+<div ng-controler="profileCtrl">
+    <div class="cotent ">
+        <div class="text-center title"><h4>Profile</h4></div>
+        <div class="small-10 small-centered">
+            <form name="profile" id="profileFrm" method="post" action="" style="margin-top:20px" >  
+                                <input type="hidden" name="insType" id="insType" value="new">
+                                <input type="hidden" name="id" id="id" value="">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="" name="name" required="required">
+                
+                <label for="lname">Last Name</label>
+                <input class="input" type="text" id="lname" placeholder="" name="lname">
+                
+                <label for="NickName">Nick name</label>
+                <input class="input" type="text" id="nickname" placeholder="" name="nickname">
+                
+                <label for="email">Email</label>
+                <input class="input" type="email" id="email" placeholder="" name="email">
+                
+                <label for="cell">Cell</label>
+                <input class="input" type="number" id="number" placeholder="" name="cell">
+                
+                <label for="postalCode">Postal Code</label>
+                <input class="input" type="text" id="postalCode" placeholder="" name="postalCode">
+                
+<!--
+                <label for="active">Image</label>
+                <input style="margin-top: 12px;" type="file" id="image" name="image" multiple="" maxlength="1" class="multi with-preview MultiFile-applied" value="">
+-->
+                       
+                               
+                                <div class="small-4 columns">
+                <button type="button"  class="button">Submit</button>
+            </div>
+                            </form>
+        </div>
+    </div>
+</div>

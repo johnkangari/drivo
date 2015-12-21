@@ -10,7 +10,7 @@
             <i ng-if="orderDetail.order.status==2" class="fa fa-times red"></i>
             </span></div>
         <div class="row">
-            <!--                        <iframe src="https://www.google.com/maps/place/n32db&output=embed" width="100%" height="300" frameborder="0" style="border:0;height:200px!important;"></iframe>-->
+      
             <table class="orderDetail">
                 <tr>
                     <td><span>Name</span></td>
@@ -18,7 +18,7 @@
                 </tr>
                 <tr>
                     <td><span>Tel</span></td>
-                    <td>{{orderDetail.client.tel}}</td>
+                    <td>{{orderDetail.client.cell}}</td>
                 </tr>
                 <tr>
                     <td><span>Delivery Time</span></td>
@@ -47,11 +47,11 @@
                 </tr>
             </table>  
             <div class="small-4 columns">  
-                <button class="success button" ng-click="changeOrderStat(orderDetail.order._id, 1)" style="width:100%">
+                <button class="success button" ng-click="changeOrderStat(orderDetail.order._id, 1)" >
                 Deliver</button>
             </div>
             <div class="small-4 columns">
-                <button type="button" type="button" class="alert button" ng-click="changeOrderStat(orderDetail.order._id, 2)" style="width:100%">Cancel</button>
+                <button type="button"  class="alert button" ng-click="changeOrderStat(orderDetail.order._id, 2)">Cancel</button>
             </div>
             
             <div class="small-4 columns">
@@ -60,10 +60,9 @@
             
         </div>
         <div class="row">
-            <div class="small-9 small-centered">
-                <a class="expanded button" style="background-color:#ccc;color:#333;width:100%;" href="#orderItemDetail">This Order Items</a>
-            </div>
+
             <div  id="orderItemDetail">
+                <h3 style="margin-bottom:0.5rem;"> This Order Items</h3>
                 <table class="orderDetail">
                     <tr ng-repeat="order in orderDetail.order.basket" >
                         <td><span>{{order.name}}</span></td>
