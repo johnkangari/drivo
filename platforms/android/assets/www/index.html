@@ -17,7 +17,8 @@
         <script src="./js/foundation.min.js"></script>
         <script src="./js/nhp.js"></script>
     </head>
-    <body>
+
+    <body> 
         <script>
 //            var exit = 0;
 //            document.addEventListener('backbutton', function(event){
@@ -31,17 +32,21 @@
 //            });
             $(document).ready(function(){
                 $(document).foundation();
+                 setTimeout(function() { 
+        $('#splashScreen').fadeOut(); 
+ }, 2000); 
             });
         </script>
+<!--        <div id="splashScreen"><img src="img/splash-screen.jpg" /></div>-->
         
         <ng-view></ng-view>
 
         <div class="footer">
             <div class="icon-bar five-up" >
                 <div class="small-6 columns" style="border-right:solid 1px rgba(29, 156, 210, 0.6)">
-                    <a class="item" ng-href="#/profile">
+                    <a class="item" ng-href="#/home">
                         <i class="fa fa-home"></i>
-                        <label id="itemlabel2"><!--Current Order--> pportfolio</label>
+                        <label id="itemlabel2">Current Order</label>
                     </a>
                 </div>
                 <div class="small-6 columns">

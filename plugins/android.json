@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "uk.co.onosystem.drivo"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "uk.co.onosystem.drivo"
         }
     },
     "dependent_plugins": {}

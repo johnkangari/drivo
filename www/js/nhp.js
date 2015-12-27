@@ -72,6 +72,9 @@ app.controller("orderDetailCtrl", function($scope, $http){
                     window.location.reload();
                 }
             });
+        }; // /change order stat
+        $scope.note             = function(){
+            navigator.notification.prompt("enter your note.", function(){alert('ol')}, "note", ["lili","saji"], "...");
         };
     });// /get orders
 });// homeCtrl

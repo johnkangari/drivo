@@ -9,6 +9,7 @@
             <i ng-if="orderDetail.order.status==1" class="fa fa-check green"></i>
             <i ng-if="orderDetail.order.status==2" class="fa fa-times red"></i>
             </span></div>
+        
         <div class="row">
       
             <table class="orderDetail">
@@ -55,7 +56,7 @@
             </div>
             
             <div class="small-4 columns">
-                <button class="button" type="button">Note</button>
+                <button class="button" type="button" ng-click="note()">Note</button>
             </div>
             
         </div>
